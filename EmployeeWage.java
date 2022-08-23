@@ -4,16 +4,23 @@ public class EmployeeWage {
     public static  void main(String[] args)
     {
         int isFullTime=1;
+        int isPartTime=2;
         int EmpHrs=0;
         int EmpWage=0;
-        int EmpRatePerHr=20;
+        int EmpWagePerHr=20;
 
-        double EmpCheck = Math.floor(Math.random()*10)%2;
-        if (EmpCheck==isFullTime);
+        double EmpCheck = Math.floor(Math.random()* 10)%3;
+
+        if (EmpCheck==isFullTime)
         {
             EmpHrs=8;
         }
-        EmpWage = EmpHrs * EmpRatePerHr;
-        System.out.println(" EmpWage "+EmpWage);
 
-    }}
+        else if (EmpCheck == isPartTime)
+        {
+            EmpHrs=4;
+        }
+        EmpWage = EmpHrs * EmpWagePerHr;
+        System.out.println("Emp Wage" +EmpWage);
+    }
+    }
