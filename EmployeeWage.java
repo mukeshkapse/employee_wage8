@@ -3,32 +3,23 @@ package com.bridgelabz.com;
 public class EmployeeWage {
     public static  void main(String[] args)
     {
-        final int isFullTime = 1;
-        final int isEmpRatPerHr = 20;
-        final int isPartTime = 2;
-
-        System.out.println("Welcome to Employee wage");
-
+        int isFullTime=1;
+        int isPartTime=2;
         int EmpHrs=0;
         int EmpWage=0;
+        int EmpRatPerHr=20;
+        int TotalDayWage=20;
 
-        double EmpCheck = Math.floor(Math.random()*10)%3;
-        switch ((int)EmpCheck){
-
-            case isFullTime:
-                EmpHrs=8;
-                System.out.println("Employee is full time");
-                break;
-
-            case isPartTime:
-                EmpHrs=4;
-                System.out.println("Employee is part time");
-                break;
-            default:
-                EmpHrs=0;
-                System.out.println("Employee is absent");
+        double EmpCheck= Math.floor(Math.random()*10)%2;
+        if(EmpCheck == isFullTime)
+        {
+            EmpHrs=8;
         }
-        EmpWage = EmpHrs*isEmpRatPerHr;
-        System.out.println("Emp Wage"+ EmpWage);
+        else if (EmpCheck == isPartTime)
+        {
+            EmpHrs=4;
+        }
+        EmpWage = EmpHrs * EmpRatPerHr *TotalDayWage;
+        System.out.println("TotalDay Wage " +EmpWage);
     }
     }
